@@ -8,16 +8,37 @@ export const loader = async ({ context }) => {
 	const links = canvasRequest.context.links;
 	const params = canvasRequest.context.environment.parameters;
 
+	// Build the url to fetch the agreement on the page
 	const agreementRequestUrl =
 		client.instanceUrl +
-		links.sObjectUrl +
+		links.sobjectUrl +
 		`Apttus__APTS_Agreement__c/${params.recordId}`;
 
-	let data = {
-		agreementUrl: agreementRequestUrl,
-		user: canvasRequest.context.user,
+	// Build the request header with the oauth token passed
+	// in from the signing request
+	const reqHeader = new Headers({
+		Authorization: "OAuth " + client.oauthToken,
+		"Content-Type": "application/json",
+	});
+
+	// Build the request with the url and header
+	const req = new Request(agreementRequestUrl, {
+		method: "GET",
+		headers: reqHeader,
+		mode: "cors",
+		cache: "default",
+	});
+
+	// Fetch data and deserialize it
+	let agreementResponse = await fetch(req);
+	let agreementJson = await agreementResponse.json();
+
+	let dynamicResponse = {
+		fullName: canvasRequest.context.user.fullName,
+		agreementName: agreementJson.Name,
 	};
-	return data;
+
+	return dynamicResponse;
 };
 
 export const action = async ({ request }) => {
@@ -26,14 +47,14 @@ export const action = async ({ request }) => {
 };
 
 export default function sign() {
-	const data = useLoaderData();
-
-	console.log(data);
+	const { fullName, agreementName } = useLoaderData();
+	console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+	console.log(fullName, agreementName);
 	return (
 		<>
 			<div>
-				Hello {data.user.fullName}
-				<p>Agreement Url: {data.agreementUrl}</p>
+				Hello {fullName}
+				<p>Agreement: {agreementName}</p>
 			</div>
 		</>
 	);
