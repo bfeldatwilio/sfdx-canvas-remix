@@ -1,0 +1,91 @@
+{
+	"algorithm": "HMACSHA256",
+	"issuedAt": 1946246067,
+	"userId": "00574000000EK5PAAW",
+	"client": {
+		"refreshToken": "5Aep861PZc0QFfNmSy18Qe3HJ7oVo2iR1F2CK5gqIGC.XEmieMD5iTOPUg2WnR_pKBT7LE24QgES5NpE1ZFh2rO",
+		"instanceId": "_:node_react_canvas:624:0:canvasapp",
+		"targetOrigin": "https://twlo--bendev.my.salesforce.com",
+		"instanceUrl": "https://twlo--bendev.my.salesforce.com",
+		"oauthToken": "00D740000004awT!AREAQH0HmaaN91_yY3fTUA5bt6HU18H5XdekvBwC2DMDsn7UIVoKXzL6fNZNPkKL.6lZ0yPI6jv66fzJdsbd3bTaRnHe7rrZ"
+	},
+	"context": {
+		"user": {
+			"userId": "00574000000EK5PAAW",
+			"userName": "bfelda@twilio.com.bendev2",
+			"firstName": "Ben",
+			"lastName": "Felda",
+			"email": "bfelda@twilio.com",
+			"fullName": "Ben Felda",
+			"locale": "en_US",
+			"language": "en_US",
+			"timeZone": "America/Los_Angeles",
+			"profileId": "00e40000000vg2C",
+			"roleId": "00E400000013JuN",
+			"userType": "STANDARD",
+			"currencyISOCode": "USD",
+			"profilePhotoUrl": "https://twlo--bendev--c.documentforce.com/profilephoto/005/F",
+			"profileThumbnailUrl": "https://twlo--bendev--c.documentforce.com/profilephoto/005/T",
+			"siteUrl": null,
+			"siteUrlPrefix": null,
+			"networkId": null,
+			"accessibilityModeEnabled": false,
+			"isDefaultNetwork": true
+		},
+		"links": {
+			"loginUrl": "https://twlo--bendev.my.salesforce.com",
+			"enterpriseUrl": "/services/Soap/c/54.0/00D740000004awT",
+			"metadataUrl": "/services/Soap/m/54.0/00D740000004awT",
+			"partnerUrl": "/services/Soap/u/54.0/00D740000004awT",
+			"restUrl": "/services/data/v54.0/",
+			"sobjectUrl": "/services/data/v54.0/sobjects/",
+			"searchUrl": "/services/data/v54.0/search/",
+			"queryUrl": "/services/data/v54.0/query/",
+			"recentItemsUrl": "/services/data/v54.0/recent/",
+			"chatterFeedsUrl": "/services/data/v31.0/chatter/feeds",
+			"chatterGroupsUrl": "/services/data/v54.0/chatter/groups",
+			"chatterUsersUrl": "/services/data/v54.0/chatter/users",
+			"chatterFeedItemsUrl": "/services/data/v31.0/chatter/feed-items",
+			"compositeUrl": "/services/data/v54.0/composite",
+			"userUrl": "/00574000000EK5PAAW"
+		},
+		"application": {
+			"name": "node-react-canvas",
+			"canvasUrl": "http://localhost:3000/canvasdemo",
+			"applicationId": "06P740000004CRb",
+			"version": "1.0",
+			"authType": "SIGNED_REQUEST",
+			"referenceId": "09H7400000000IK",
+			"options": ["PersonalEnabled"],
+			"samlInitiationMethod": "None",
+			"isInstalledPersonalApp": false,
+			"developerName": "node_react_canvas",
+			"namespace": ""
+		},
+		"organization": {
+			"organizationId": "00D740000004awTEAQ",
+			"name": "Twilio",
+			"multicurrencyEnabled": false,
+			"namespacePrefix": null,
+			"currencyIsoCode": "USD"
+		},
+		"environment": {
+			"referer": null,
+			"locationUrl": "https://twlo--bendev.lightning.force.com/lightning/r/Opportunity/00674000002B4hqAAC/view",
+			"displayLocation": "Aura",
+			"sublocation": null,
+			"uiTheme": "Theme3",
+			"dimensions": {
+				"width": "100%",
+				"height": "900px",
+				"maxWidth": "1000px",
+				"maxHeight": "2000px",
+				"clientWidth": "350px",
+				"clientHeight": "529px"
+			},
+			"parameters": {},
+			"record": {},
+			"version": { "season": "SPRING", "api": "54.0" }
+		}
+	}
+}
