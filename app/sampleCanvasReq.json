@@ -83,7 +83,9 @@
 				"clientWidth": "350px",
 				"clientHeight": "529px"
 			},
-			"parameters": {},
+			"parameters": {
+				"recordId": "a3I7400000000ewEAA"
+			},
 			"record": {},
 			"version": { "season": "SPRING", "api": "54.0" }
 		}

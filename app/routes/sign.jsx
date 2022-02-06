@@ -1,5 +1,18 @@
 import { useLoaderData } from "remix";
 import { verifyAndDecode } from "../utils/sf-tools";
+import styles from "../styles/sign.css";
+
+export function links() {
+	return [
+		{
+			rel: "preload",
+			href: "/assets/heart.svg",
+			as: "image",
+			type: "image/svg+xml",
+		},
+		{ rel: "stylesheet", href: styles },
+	];
+}
 
 export const loader = async ({ context }) => {
 	const { signedRequest } = context;
@@ -36,6 +49,7 @@ export const loader = async ({ context }) => {
 	let dynamicResponse = {
 		fullName: canvasRequest.context.user.fullName,
 		agreementName: agreementJson.Name,
+		agreementCompanyName: agreementJson.Account_Legal_Name__c,
 	};
 
 	return dynamicResponse;
@@ -47,15 +61,17 @@ export const action = async ({ request }) => {
 };
 
 export default function sign() {
-	const { fullName, agreementName } = useLoaderData();
-	console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-	console.log(fullName, agreementName);
+	const data = useLoaderData();
 	return (
-		<>
-			<div>
-				Hello {fullName}
-				<p>Agreement: {agreementName}</p>
+		<article className="tile-container">
+			<div className="gradient-bg blue-gradient"></div>
+			<div className="icon-overlay circle-svg"></div>
+			<div className="tile-content">
+				<h1>Remix</h1>
+				<p>{data.fullName}</p>
+				<p>{data.agreementCompanyName}</p>
+				<p>{data.agreementName}</p>
 			</div>
-		</>
+		</article>
 	);
 }

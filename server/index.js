@@ -35,7 +35,7 @@ app.all(
 		? createRequestHandler({
 				build: require("./build"),
 				getLoadContext(req) {
-					return { signedRequest: req.body.signed_request };
+					return { signedRequest: req.body?.signed_request };
 				},
 		  })
 		: (req, res, next) => {
@@ -44,7 +44,7 @@ app.all(
 				return createRequestHandler({
 					build,
 					getLoadContext(req) {
-						return { signedRequest: req.body.signed_request };
+						return { signedRequest: req.body?.signed_request };
 					},
 					mode: MODE,
 				})(req, res, next);

@@ -1,0 +1,87 @@
+:root {
+	--twitter-blue: #6cadde;
+	--pwned-blue: rgba(58, 154, 196, 0.5);
+	--signalr-blue: #59b4d9;
+	--dotnet-purple-primary: #512bd4;
+	--dotnet-purple-gradient-9: #7014e8;
+	--dotnet-purple-gradient-100: #4931de;
+	--dotnet-purple-light: #dfd8f7;
+	--dotnet-purple-dark: #2b0b98;
+	--dotnet-gray-light: #e5e5e1;
+	--dotnet-gray: #969696;
+	--dotnet-gray-dark: #505050;
+}
+
+html {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 200;
+	color: white;
+}
+
+.tile-container {
+	position: relative;
+	width: 100%;
+}
+
+.tile-content {
+	padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+}
+
+.gradient-bg {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: -2;
+	border-radius: 4px;
+}
+
+.icon-overlay {
+	mix-blend-mode: soft-light;
+	background-position: 20px 20px;
+	background-size: 35px;
+	opacity: 0.5;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+}
+
+.circle-svg {
+	background-image: url("/assets/circle.svg");
+}
+
+.zap-svg {
+	background-image: url("/assets/zap.svg");
+}
+
+.plus-svg {
+	background-image: url("/assets/plus.svg");
+}
+
+.heart-svg {
+	background-image: url("/assets/heart.svg");
+}
+
+.purple-gradient {
+	background-image: linear-gradient(
+		to bottom,
+		var(--dotnet-purple-primary),
+		var(--dotnet-purple-dark)
+	);
+}
+
+.blue-gradient {
+	background-image: linear-gradient(
+		to bottom,
+		hsl(204, 86%, 53%),
+		hsl(220, 96%, 45%)
+	);
+}
+
+.morning-gradient {
+	background-image: linear-gradient(to bottom, #ed4e50, #f06f00);
+}
+
+.has-shadow {
+	box-shadow: 0px 1.2rem 2.5rem 2rem rgb(81 43 212 / 20%);
+}
